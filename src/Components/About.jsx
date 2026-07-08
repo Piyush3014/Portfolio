@@ -1,6 +1,5 @@
-
 import { motion } from "framer-motion";
-import { FaLinkedin } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 
 function About() {
   return (
@@ -11,7 +10,7 @@ function About() {
         transition={{ duration: 0.8 }}
         className="max-w-2xl text-center"
       >
-        <h1 className="text-4xl md:text-6xl font-light mb-6">
+        <h1 className="text-4xl md:text-6xl font-light mb-6 text-white">
           Hello, I'm <span className="font-semibold text-blue-400">Piyush Kumar</span>
         </h1>
         
@@ -22,20 +21,26 @@ function About() {
           technologies and master modern tech stacks to solve complex real-world problems.
         </p>
 
-        <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
-          <a 
-            href="https://linkedin.com/in/your-profile" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 text-slate-400 hover:text-white transition-colors"
-          >
+        {/* Social Links Row */}
+        <div className="flex flex-wrap justify-center gap-6 mb-10">
+          <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-slate-400 hover:text-blue-500 transition-colors">
             <FaLinkedin size={24} /> LinkedIn
           </a>
+          <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors">
+            <FaGithub size={24} /> GitHub
+          </a>
+          <a href="https://instagram.com/your-handle" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-slate-400 hover:text-pink-500 transition-colors">
+            <FaInstagram size={24} /> Instagram
+          </a>
+        </div>
+
+        {/* Resume Button */}
+        <div>
           <a 
             href="YOUR_GOOGLE_DRIVE_LINK_HERE" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="px-8 py-3 border border-blue-500 text-blue-400 rounded-full hover:bg-blue-500 hover:text-white transition-all text-center"
+            className="px-8 py-3 border border-blue-500 text-blue-400 rounded-full hover:bg-blue-500 hover:text-white transition-all inline-block"
           >
             View Resume
           </a>
@@ -45,4 +50,4 @@ function About() {
   );
 }
 
-export default About
+export default About;
