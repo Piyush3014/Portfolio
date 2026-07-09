@@ -23,13 +23,13 @@ function About() {
 
         {/* Social Links Row */}
         <div className="flex flex-wrap justify-center gap-6 mb-10">
-          <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-slate-400 hover:text-blue-500 transition-colors">
+          <a href="https://www.linkedin.com/in/piyush-kumar-2a0571288/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-slate-400 hover:text-blue-500 transition-colors">
             <FaLinkedin size={24} /> LinkedIn
           </a>
-          <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors">
+          <a href="https://github.com/Piyush3014" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors">
             <FaGithub size={24} /> GitHub
           </a>
-          <a href="https://instagram.com/your-handle" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-slate-400 hover:text-pink-500 transition-colors">
+          <a href="https://www.instagram.com/piyyush._.30?igsh=N3UxazQ4dWhycGJi" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-slate-400 hover:text-pink-500 transition-colors">
             <FaInstagram size={24} /> Instagram
           </a>
         </div>

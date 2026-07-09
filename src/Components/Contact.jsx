@@ -8,39 +8,45 @@ const Contact = () => {
     setStatus("Sending...");
     
     const formData = new FormData(e.target);
-    // This grabs the key from your .env file
-    formData.append("access_key", import.meta.env.FORM_KEY);
+    
+    // Use the VITE_ prefix here
+    formData.append("access_key", import.meta.env.VITE_FORM_KEY);
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData,
-    });
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
 
-    const data = await response.json();
+      const data = await response.json();
 
-    if (data.success) {
-      setStatus("Message Sent Successfully!");
-      e.target.reset();
-    } else {
-      setStatus("Something went wrong. Please try again.");
+      if (data.success) {
+        setStatus("Message Sent Successfully!");
+        e.target.reset();
+      } else {
+        console.error(data);
+        setStatus("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      setStatus("Error: Could not connect to server.");
     }
   };
 
   return (
-    <section id="contact" className="py-20 px-6 max-w-lg mx-auto">
+    <section id="contact" className="py-20 px-6 max-w-lg mx-auto text-white">
       <h2 className="text-3xl font-bold mb-6 text-center">Contact Me</h2>
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <input 
           type="text" name="name" placeholder="Your Name" 
-          className="p-3 bg-slate-800 rounded border border-slate-700" required 
+          className="p-3 bg-slate-800 rounded border border-slate-700 focus:border-blue-500 outline-none transition-all" required 
         />
         <input 
           type="email" name="email" placeholder="Your Email" 
-          className="p-3 bg-slate-800 rounded border border-slate-700" required 
+          className="p-3 bg-slate-800 rounded border border-slate-700 focus:border-blue-500 outline-none transition-all" required 
         />
         <textarea 
           name="message" placeholder="Your Message" 
-          className="p-3 bg-slate-800 rounded border border-slate-700 h-32" required 
+          className="p-3 bg-slate-800 rounded border border-slate-700 h-32 focus:border-blue-500 outline-none transition-all" required 
         />
         <button 
           type="submit" 
