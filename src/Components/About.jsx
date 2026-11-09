@@ -37,7 +37,7 @@ function About() {
         {/* Resume Button */}
         <div>
           <a 
-            href="https://drive.google.com/file/d/1wBRWL9MgKlhrgU0qPz-S37fXvNJtKQW-/view?usp=sharing" 
+            href="https://drive.google.com/file/d/1rJ-lNt2V7SHA1CaMgYi7a9jFaQBFkcLo/view?usp=sharing" 
             target="_blank" 
             rel="noopener noreferrer"
             className="px-8 py-3 border border-blue-500 text-blue-400 rounded-full hover:bg-blue-500 hover:text-white transition-all inline-block"
